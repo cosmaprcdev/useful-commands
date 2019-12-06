@@ -79,6 +79,31 @@
 
 ## Puppet
 
+#### Puppet master
+```
+systemctl status puppetserver
+puppet cert list
+puppet cert list --all
+puppet cert sign agent.domain.com
+puppet --help | more
+puppet help resource | more
+pupper resource --types | more
+puppet describe package | more
+puppet config print | grep -i module
+puppet module --help
+puppet module generate author-modulename
+puppet parser validate init.pp
+```
+
+#### Puppet agent
+```
+systemctl status puppet
+systemctl start puppet
+/etc/puppet/puppet.conf - Agent must have certname and server propeties
+puppet agent -tv --noop
+puppet agent -tv
+```
+
 #### Config file
 	cat /etc/puppet/puppet.conf
 
